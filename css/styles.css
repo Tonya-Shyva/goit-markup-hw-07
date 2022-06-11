@@ -72,13 +72,12 @@ p {
 /* Шапка  */
 
 .page-header {
-  display: flex;
   min-height: 80px;
   border-bottom: 1px solid #ececec;
 }
 
-.top,
-.page-nav {
+.page-header,
+.page-header__nav {
   display: flex;
   align-items: center;
 }
@@ -93,11 +92,10 @@ p {
   color: #2196f3;
 }
 
-.top .logo {
+.page-header__logo {
   margin-right: 93px;
 }
-
-.logo-end {
+.logo__part-end--black {
   color: var(--title-text-color);
 }
 
@@ -113,14 +111,12 @@ p {
   letter-spacing: 0.02em;
 }
 
-.studio.current,
-.portfolio.current,
-.contacts.current {
+.nav-list__link--current {
   color: var(--accent-color);
   position: relative;
 }
 
-.current::after {
+.nav-list__link--current::after {
   content: '';
   position: absolute;
   left: 0;
@@ -134,38 +130,30 @@ p {
   background-color: var(--accent-color);
 }
 
-.nav-list,
 .connection-list {
   margin-left: auto;
 }
 
-.studio,
-.portfolio,
-.contacts {
+.nav-list__link {
   color: var(--primary-text-color);
   transition: color var(--transition-settings);
 }
 
-.email-item,
-.telnumber-item {
+.connection-list__item {
   display: flex;
+  min-width: 142px;
   height: 16px;
   margin: 0;
   padding: 0;
   align-items: center;
-}
-
-.email-item {
-  width: 161px;
   margin-right: 50px;
 }
 
-.telnumber-item {
-  width: 142px;
+.connection-list__item:last-child {
+  margin-right: 0;
 }
 
-.email,
-.telnumber {
+.connection-list__link {
   display: flex;
   margin: 0;
   padding: 0;
@@ -179,7 +167,7 @@ p {
   transition: color var(--transition-settings);
 }
 
-.connect-icon {
+.connection-list__icon {
   margin-right: 10px;
   padding: 0;
   fill: #757575;
@@ -187,29 +175,21 @@ p {
   transition: fill var(--transition-settings);
 }
 
-.studio:hover,
-.portfolio:hover,
-.contacts:hover,
-.email:hover,
-.telnumber:hover {
+.nav-list__link:hover,
+.connection-list__link:hover {
   color: var(--accent-color);
 }
 
-.email:hover .connect-icon,
-.telnumber:hover .connect-icon {
+.connection-list__link:hover .connection-list__icon {
   fill: currentColor;
 }
 
-.studio:focus,
-.portfolio:focus,
-.contacts:focus,
-.email:focus,
-.telnumber:focus {
+.nav-list__link:focus,
+.connection-list__link:focus {
   color: var(--accent-color);
 }
 
-.email:focus .connect-icon,
-.telnumber:focus .connect-icon {
+.connection-list__link:focus .connection-list__icon {
   fill: var(--accent-color);
 }
 /* -----------------Основной блок информации----------- */
@@ -218,7 +198,7 @@ p {
   background-color: #c4c4c4;
 }
 
-.overlay-hero {
+.hero__overlay {
   max-width: 1600px;
   max-height: 600px;
   margin-left: auto;
@@ -232,13 +212,13 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.hero .container {
+.hero__container {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
 }
 
-.title-hero {
+.hero__title {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -253,9 +233,7 @@ p {
 
 /* кнопка заказа услуги */
 
-.order-service,
-.btn-subscribe,
-.btn-input {
+.btn {
   display: flex;
 
   min-width: 200px;
@@ -327,7 +305,7 @@ p {
   transition: transform var(--transition-settings), opacity var(--transition-settings);
 }
 
-.btn-close-modal {
+.btn-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -345,25 +323,25 @@ p {
   align-items: center;
 }
 
-.btn-close-icon {
+.btn-close__icon {
   display: block;
   margin: 0;
 }
 
-.btn-close-modal:hover > .btn-close-icon,
-.btn-close-modal:focus > .btn-close-icon {
+.btn-close:hover .btn-close__icon,
+.btn-close:focus .btn-close__icon {
   fill: #2196f3;
   transition: fill var(--transition-settings);
 }
 
 /* -------Форма в модалке-------------- */
 
-.form {
+.order-form {
   width: inherit;
   padding: 40px;
 }
 
-.form-head {
+.order-form__head {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -381,7 +359,7 @@ p {
   margin-bottom: 10px;
 }
 
-.form-field input {
+.form-field__input {
   height: 40px;
   padding: 11px 12px 11px 40px;
   cursor: pointer;
@@ -393,12 +371,12 @@ p {
   transition: border var(--transition-settings);
 }
 
-.form-field input:focus,
+.form-field__input:focus,
 .form-field textarea:focus {
   border: 1px solid #2196f3;
 }
 
-.form-field label,
+.form-field__label,
 .comment-input[placeholder='Введите текст'] {
   cursor: pointer;
   font-size: 12px;
@@ -409,7 +387,7 @@ p {
   transition: border var(--transition-settings);
 }
 
-.form-field label {
+.form-field__label {
   margin-bottom: 4px;
 }
 
@@ -417,7 +395,7 @@ p {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.icon-input {
+.form-field__icon {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -429,7 +407,7 @@ p {
   transition: fill var(--transition-settings);
 }
 
-.form-input:focus ~ .icon-input {
+.form-field__input:focus ~ .form-field__icon {
   fill: var(--accent-color);
 }
 
@@ -444,7 +422,7 @@ p {
   transition: border var(--transition-settings);
 }
 
-.form-checkbox {
+.checkbox {
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -455,7 +433,7 @@ p {
   color: #757575;
 }
 
-.checkbox-input {
+.checkbox__input--visually-hidden {
   /* как для visually-hidden */
   position: absolute;
   white-space: nowrap;
@@ -470,7 +448,7 @@ p {
   /* или можно использовать appearens:none в связке с position:absolute */
 }
 
-.checkbox-icon {
+.checkbox__icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -479,10 +457,11 @@ p {
   border: 2px solid #212121;
   border-radius: 2px;
 
-  transition: background-color var(--transition-settings);
+  transition: background-color var(--transition-settings), border-color var(--transition-settings);
 }
 
-.checkbox-input:checked + .checkbox-icon {
+/* !!!! не получается чекнутая иконка---- */
+.checkbox:checked .checkbox__icon {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url('../images/icon-check.svg');
@@ -746,7 +725,8 @@ p {
 .footer-container {
   display: flex;
 }
-.foot .logo-end {
+
+.logo__part-end--white {
   color: #ffffff;
 }
 
@@ -840,7 +820,7 @@ p {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.btn-subscribe {
+.subscribe__btn {
   margin-top: 0px;
   margin-left: 12px;
   margin-right: 0px;
