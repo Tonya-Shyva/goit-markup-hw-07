@@ -19,10 +19,6 @@ body {
   background-color: var(--primary-background-color);
 }
 
-textarea {
-  resize: none;
-}
-
 .section {
   margin: 0;
   padding-bottom: 94px;
@@ -44,13 +40,11 @@ textarea {
   margin: 0;
 }
 
-.item:not(:last-child) {
+.list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-h1,
-h2,
-h3 {
+.section__title {
   margin: 0;
 }
 
@@ -129,14 +123,13 @@ p {
   border-radius: 2px;
   background-color: var(--accent-color);
 }
-
-.connection-list {
-  margin-left: auto;
-}
-
 .nav-list__link {
   color: var(--primary-text-color);
   transition: color var(--transition-settings);
+}
+
+.connection-list {
+  margin-left: auto;
 }
 
 .connection-list__item {
@@ -371,13 +364,26 @@ p {
   transition: border var(--transition-settings);
 }
 
+.form-field__textarea {
+  resize: none;
+  color: rgba(117, 117, 117, 0.5);
+  height: 120px;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  transition: border var(--transition-settings);
+}
+
 .form-field__input:focus,
-.form-field textarea:focus {
+.form-field__textarea:focus {
   border: 1px solid #2196f3;
 }
 
 .form-field__label,
-.comment-input[placeholder='Введите текст'] {
+.form-field__textarea[placeholder='Введите текст'] {
   cursor: pointer;
   font-size: 12px;
   line-height: 1.17;
@@ -389,10 +395,6 @@ p {
 
 .form-field__label {
   margin-bottom: 4px;
-}
-
-.comment-input {
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-field__icon {
@@ -409,17 +411,6 @@ p {
 
 .form-field__input:focus ~ .form-field__icon {
   fill: var(--accent-color);
-}
-
-.form-field textarea {
-  height: 120px;
-  padding: 12px 16px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-
-  transition: border var(--transition-settings);
 }
 
 .checkbox {
@@ -479,11 +470,11 @@ p {
 
 /* Особенности */
 
-.features {
+.feature-section {
   padding-bottom: 0px;
 }
 
-.visually-hidden {
+.section__title--visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -496,15 +487,11 @@ p {
   margin: -1px;
 }
 
-.features-list {
+.feature-list {
   height: 251px;
 }
 
-.feature-item {
-  width: 270px;
-}
-
-.container-feature-icon {
+.feature-list__thumb {
   display: flex;
   height: 120px;
   margin-bottom: 30px;
@@ -515,34 +502,36 @@ p {
   background-color: #f5f4fa;
 }
 
-.feature-icon {
+.feature-list__icon {
   width: 70px;
   height: 70px;
 }
 
-.title-feature-item,
-.description-feature {
+.feature-list__subtitle {
   text-align: left;
-  font-size: 14px;
-  letter-spacing: 0.03em;
 }
 
-.title-feature-item {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  /* font-weight: 700 -бо він автоматично для h1...h6 такий; */
+.subtitle {
+  margin: 0px;
+
+  font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-.description-feature {
+.feature-list__description {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   line-height: 1.71;
   color: #757575;
 }
 
 /* Чем мы занимаемся */
 
-.title {
+.section__title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -576,11 +565,7 @@ p {
 }
 
 .description-work-title {
-  font-size: 14px;
-  line-height: 1.14;
   text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #ffffff;
 }
 
