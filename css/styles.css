@@ -105,11 +105,6 @@ p {
   letter-spacing: 0.02em;
 }
 
-.nav-list__link--current {
-  color: var(--accent-color);
-  position: relative;
-}
-
 .nav-list__link--current::after {
   content: '';
   position: absolute;
@@ -126,6 +121,11 @@ p {
 .nav-list__link {
   color: var(--primary-text-color);
   transition: color var(--transition-settings);
+}
+
+.nav-list__link--current {
+  color: var(--accent-color);
+  position: relative;
 }
 
 .connection-list {
@@ -256,7 +256,7 @@ p {
 
 /* -----------БЭКДРОП И МОДАЛЬНОЕ ОКНО ДЛЯ ЗАКАЗА УСЛУГИ---------- */
 
-.backdrop.is-hidden {
+.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -540,8 +540,8 @@ p {
   letter-spacing: 0.03em;
 }
 
-.work-img,
-.project-image {
+.example-thumb__img,
+.project-thumb__image {
   height: 294px;
 }
 
@@ -549,7 +549,7 @@ p {
   position: relative;
 }
 
-.description-work {
+.example-thumb__description {
   position: absolute;
   display: flex;
 
@@ -564,18 +564,18 @@ p {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.description-work-title {
+.example-thumb__title {
   text-align: center;
   color: #ffffff;
 }
 
 /* -----------------Наша команда-------------------- */
-.our-team {
+.team-section {
   background-color: #f5f4fa;
   letter-spacing: 0.03em;
 }
 
-.member-item {
+.member-card {
   /* width: 270px; */
   width: calc(100%-120px / 4);
   /* 100 %- это ширина container */
@@ -588,37 +588,37 @@ p {
   background-color: var(--primary-background-color);
 }
 
-.member-name,
-.position {
+.member-card__name,
+.member-card__position {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
-.member-name {
+.member-card__name {
   font-weight: 500;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-.position {
+.member-card__position {
   color: #757575;
   margin-bottom: 16px;
 }
 
-.social-networks-list {
+.soc-list {
   width: 206px;
   height: 44px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.soc-item {
+.soc-list__item {
   display: block;
   margin-right: 10px;
 }
 
-.soc-item:last-child {
+.soc-list__item:last-child {
   margin-right: 0px;
 }
 
@@ -644,23 +644,23 @@ p {
   background-color: var(--accent-color);
 }
 
-.soc-icon {
+.soc-link__icon {
   width: 20px;
   height: 20px;
 }
 
-.icon-fill {
+.link__icon--grey {
   fill: #afb1b8;
   transition: fill var(--transition-settings);
 }
 
-.soc-link:hover .icon-fill,
-.soc-link:focus .icon-fill {
+.soc-link:hover .link__icon--grey,
+.soc-link:focus .link__icon--grey {
   fill: #ffffff;
 }
 
 /* ---------- Постоянные клиенты ---------- */
-.customer-item {
+.list__customer-item {
   display: flex;
   width: 170px;
   height: 92px;
@@ -673,8 +673,8 @@ p {
   transition: border var(--transition-settings);
 }
 
-.customer-item:hover,
-.customer-item:focus {
+.list__customer-item:hover,
+.list__customer-item:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -689,8 +689,8 @@ p {
   border: none;
 }
 
-.customer-item:hover .icon-fill,
-.customer-item:focus .icon-fill {
+.list__customer-item:hover .link__icon--grey,
+.list__customer-item:focus .link__icon--grey {
   fill: var(--accent-color);
 }
 
@@ -715,7 +715,7 @@ p {
   color: #ffffff;
 }
 
-.find-us {
+.footer__address {
   width: 231px;
   margin-top: 20px;
 
@@ -727,40 +727,29 @@ p {
   text-align: left;
 }
 
-.connection-footer-list {
+.contact-link {
   display: block;
-  margin-top: 9px;
-}
-
-.connection-email-item {
-  margin-bottom: 9px;
-}
-
-.tel-number {
-  margin-bottom: 0px;
-}
-
-.email-address,
-.tel-number {
+  margin: 9px 0px;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--transition-settings);
 }
 
-.email-address:hover,
-.tel-number:hover,
-.email-address:focus,
-.tel-number:focus {
+.contact-link:last-child {
+  margin: 0;
+}
+
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
 }
 
-.footer-join {
+.footer__join {
   width: 206px;
   margin-left: 70px;
   margin-right: 93px;
 }
 
-.join-text,
-.subscribe-head {
+.footer__subtitle {
   min-width: 144px;
   margin-bottom: 20px;
 
@@ -772,24 +761,30 @@ p {
   color: #ffffff;
 }
 
-.soc-footer-item {
+/* .soc-footer-item {
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+} */
+
+.soc-link--grey {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.icon-fill-footer {
+.soc-link__icon--white {
   fill: #ffffff;
 }
 
-.subscribe-form {
+/* ----ПОДПИСАТЬСЯ------- */
+
+.subscribe {
   width: 570px;
 }
 
-.subscribe-form > label {
+.subscribe__label {
   display: flex;
 }
 
-.email-input {
+.subscribe__input {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
