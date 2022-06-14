@@ -798,7 +798,7 @@ p {
 
 /* Страница Портфолио */
 
-.filters.list {
+.filter-list {
   width: calc(100%-580px);
   justify-content: center;
   align-items: center;
@@ -811,11 +811,11 @@ p {
   margin-bottom: 43px;
 }
 
-.btn-item:not(:last-child) {
+.filter-list__item:not(:last-child) {
   margin-right: 8.12px;
 }
 
-.button {
+.filter-list__button {
   display: flex;
   height: 38px;
   justify-content: center;
@@ -838,8 +838,8 @@ p {
     filter var(--transition-settings);
 }
 
-.filters .button:hover,
-.filters .button:focus {
+.filter-list__button:hover,
+.filter-list__button:focus {
   background-color: var(--accent-color);
   color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -849,7 +849,7 @@ p {
   flex-wrap: wrap;
 }
 
-.project-item {
+.projects-list__item {
   width: calc(100%-90px / 3);
   /* 100 %- это ширина container */
   /* 90px - это 2 margin-right в строке (по 30px) и 2 боковых паддинга у контейнера(по 15px) */
@@ -857,11 +857,15 @@ p {
   margin-bottom: 30px;
 }
 
-.project-item:nth-child(3n) {
+.projects-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.projects-list__item:nth-child(3n) {
   margin-right: 0;
 }
 
-.project-item:nth-last-child(-n + 3) {
+..projects-list__item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
 
@@ -870,7 +874,7 @@ p {
   overflow: hidden;
 }
 
-.project-overlay {
+.project-thumb__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -882,12 +886,12 @@ p {
   transition: transform var(--transition-settings);
 }
 
-.project-card:hover .project-overlay,
-.project-card:focus .project-overlay {
+.project-card:hover .project-thumb__overlay,
+.project-card:focus .project-thumb__overlay {
   transform: translateY(0%);
 }
 
-.overlay-text {
+.overlay__text {
   position: absolute;
   display: flex;
 
@@ -903,7 +907,7 @@ p {
   color: #ffffff;
 }
 
-.project-description {
+.project-card__description {
   padding: 20px 24px;
 
   text-align: left;
@@ -914,13 +918,13 @@ p {
   transition: box-shadow var(--transition-settings);
 }
 
-.project-card:hover .project-description,
-.project-card:focus .project-description {
+.project-card:hover .project-card__description,
+.project-card:focus .project-card__description {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-title {
+.project-card__title {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -930,7 +934,7 @@ p {
   color: #212121;
 }
 
-.project-filter {
+.project-card__filter {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
