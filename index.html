@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Вебстудия</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,7 +76,7 @@
       <section class="feature-section section">
         <div class="container">
           <!--Заголовок <h2 class="features-tittle">Особенности</h2> скрыли в css-->
-          <h2 class="section__title--visually-hidden">Особенности</h2>
+          <h2 class="visually-hidden">Особенности</h2>
           <ul class="feature-list list">
             <li class="feature-list__item list__item" style="width: 270px">
               <div class="feature-list__thumb">
@@ -648,11 +648,7 @@
           </div>
 
           <label class="checkbox">
-            <input
-              class="checkbox__input checkbox__input--visually-hidden"
-              type="checkbox"
-              name="checkbox"
-            />
+            <input class="visually-hidden checkbox__input" type="checkbox" name="checkbox-input" />
             <span class="checkbox__icon"></span>
             Соглашаюсь с рассылкой и принимаю
             <a class="agreement-link">Условия договора</a>

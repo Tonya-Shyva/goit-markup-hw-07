@@ -64,7 +64,7 @@
       <section class="projects section">
         <div class="container">
           <!--Cпрятать h1 в css-->
-          <h1 class="section__title--visually-hidden">Наши работы</h1>
+          <h1 class="visually-hidden">Наши работы</h1>
           <ul class="filters list">
             <li class="btn-item">
               <button class="btn-all button" type="button" style="min-width: 73px">Все</button>
@@ -287,75 +287,69 @@
       <div class="footer-container container">
         <div>
           <!--Logo-->
-          <a href="./index.html" class="logo foot" lang="en"
-            >Web<span class="logo-end">Studio</span>
+          <a href="./index.html" class="logo" lang="en">
+            Web<span class="logo__part-end--white">Studio</span>
           </a>
           <!-- Contact address -->
-          <address class="find-us">
+          <address class="footer__address">
             <p class="map-address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="connection-footer-list list">
-              <li class="connection-email-item">
-                <a class="email-address" href="mailto:info@example.com">info@example.com</a>
-              </li>
-              <li class="connection-item">
-                <a class="tel-number" href="tel:+380991111111">+380991111111</a>
-              </li>
-            </ul>
+            <a class="contact-link" href="mailto:info@example.com">info@example.com</a>
+            <a class="contact-link" href="tel:+380991111111">+380991111111</a>
           </address>
         </div>
 
         <!-- ПРИСОЕДИНЯЙТЕСЬ  -->
-        <div class="footer-join">
-          <p class="join-text">Присоединяйтесь</p>
-          <ul class="social-networks-list list">
-            <li class="soc-item soc-footer-item">
+        <div class="footer__join">
+          <p class="footer__subtitle">Присоединяйтесь</p>
+          <ul class="soc-list list">
+            <li class="soc-list__item">
               <a
                 tabindex="0"
-                class="soc-link"
+                class="soc-link soc-link--grey"
                 href=""
                 target="_blank"
                 rel="nofollow noreferrer noopener"
               >
-                <svg class="soc-icon icon-fill-footer">
+                <svg class="soc-link__icon soc-link__icon--white">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="soc-item soc-footer-item">
+            <li class="soc-list__item">
               <a
                 tabindex="0"
-                class="soc-link"
+                class="soc-link soc-link--grey"
                 href=""
                 target="_blank"
                 rel="nofollow noreferrer noopener"
               >
-                <svg class="soc-icon icon-fill-footer">
+                <svg class="soc-link__icon soc-link__icon--white">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="soc-item soc-footer-item">
+            <li class="soc-list__item">
               <a
                 tabindex="0"
-                class="soc-link"
+                class="soc-link soc-link--grey"
                 href=""
                 target="_blank"
                 rel="nofollow noreferrer noopener"
               >
-                <svg class="soc-icon icon-fill-footer">
+                <svg class="soc-link__icon soc-link__icon--white">
                   <use href="./images/icons.svg#icon-facebook-footer"></use>
                 </svg>
               </a>
             </li>
-            <li class="soc-item soc-footer-item">
+            <li class="soc-list__item">
               <a
                 tabindex="0"
-                class="soc-link"
+                class="soc-link soc-link--grey"
                 href=""
                 target="_blank"
                 rel="nofollow noreferrer noopener"
               >
-                <svg class="soc-icon icon-fill-footer">
+                <svg class="soc-link__icon soc-link__icon--white">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -364,26 +358,24 @@
         </div>
 
         <!-- ПОДПИШИТЕСЬ НА РАССЫЛКУ -->
-        <div сlass="subscribe">
-          <p class="subscribe-head">Подпишитесь на рассылку</p>
-          <form class="subscribe-form">
-            <label>
-              <input
-                type="email"
-                name="e-mail"
-                placeholder="E-mail"
-                class="email-input"
-                required=""
-              />
-              <button type="submit" class="btn-subscribe">
-                Подписаться
-                <svg class="send-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </label>
-          </form>
-        </div>
+        <form сlass="subscribe">
+          <p class="footer__subtitle">Подпишитесь на рассылку</p>
+          <label class="subscribe__label">
+            <input
+              type="email"
+              name="e-mail"
+              placeholder="E-mail"
+              class="subscribe__input"
+              required=""
+            />
+            <button class="btn subscribe__btn" type="submit">
+              Подписаться
+              <svg class="send-icon" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </label>
+        </form>
       </div>
     </footer>
   </body>

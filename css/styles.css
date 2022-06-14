@@ -422,21 +422,7 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-.checkbox__input--visually-hidden {
-  /* как для visually-hidden */
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-  /* или можно использовать appearens:none в связке с position:absolute */
+  cursor: pointer;
 }
 
 .checkbox__icon {
@@ -455,7 +441,7 @@ p {
 .checkbox:checked .checkbox__icon {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
-  background-image: url('../images/icon-check.svg');
+  background-image: url('./images/icon-check.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -474,7 +460,7 @@ p {
   padding-bottom: 0px;
 }
 
-.section__title--visually-hidden {
+.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
