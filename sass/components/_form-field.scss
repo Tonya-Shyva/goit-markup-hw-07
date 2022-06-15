@@ -99,11 +99,11 @@
   transition: background-color $transition-settings, border-color $transition-settings;
 }
 
-/* !!!! не получается чекнутая иконка---- */
-.checkbox:checked .checkbox__icon {
+/* !!!!  */
+.checkbox__input:checked + .checkbox__icon {
   border-color: $accent-color;
   background-color: $accent-color;
-  background-image: url('.../images/icon-check.svg');
+  background-image: url('../images/icon-check.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
