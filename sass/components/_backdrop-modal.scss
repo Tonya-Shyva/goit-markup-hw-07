@@ -61,10 +61,11 @@
 .btn-close__icon {
   display: block;
   margin: 0;
-}
 
-.btn-close:hover .btn-close__icon,
-.btn-close:focus .btn-close__icon {
-  fill: #2196f3;
   transition: fill $transition-settings;
+
+  .btn-close:hover &,
+  .btn-close:focus & {
+    fill: #2196f3;
+  }
 }

@@ -69,10 +69,10 @@
   width: 18px;
   height: 18px;
   transition: fill $transition-settings;
-}
 
-.form-field__input:focus ~ .form-field__icon {
-  fill: $accent-color;
+  .form-field__input:focus ~ & {
+    fill: $accent-color;
+  }
 }
 
 .checkbox {
@@ -103,7 +103,7 @@
 .checkbox:checked .checkbox__icon {
   border-color: $accent-color;
   background-color: $accent-color;
-  background-image: url('./images/icon-check.svg');
+  background-image: url('.../images/icon-check.svg');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
