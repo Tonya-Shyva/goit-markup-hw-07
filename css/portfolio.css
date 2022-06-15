@@ -29,7 +29,11 @@ p {
 }
 
 .section__title {
-  margin: 0;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .container {
@@ -272,6 +276,10 @@ p {
   overflow: hidden;
 }
 
+.project-thumb__image {
+  height: 294px;
+}
+
 .project-thumb__overlay {
   position: absolute;
   top: 0;
@@ -449,6 +457,9 @@ p {
 }
 .soc-link:hover .link__icon--grey, .soc-link:focus .link__icon--grey {
   fill: #ffffff;
+}
+.list__customer-item:hover .link__icon--grey, .list__customer-item:focus .link__icon--grey {
+  fill: #2196f3;
 }
 
 .soc-link--grey {
