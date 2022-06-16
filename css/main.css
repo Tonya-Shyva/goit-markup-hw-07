@@ -236,7 +236,6 @@ p {
   height: 50px;
   border: 0px;
   border-radius: 4px;
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -558,7 +557,6 @@ p {
   height: 50px;
   border: 0px;
   border-radius: 4px;
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -599,6 +597,7 @@ p {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
+  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -608,12 +607,6 @@ p {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.subscribe__btn {
-  margin-top: 0px;
-  margin-left: 12px;
-  margin-right: 0px;
 }
 
 .send-icon {
@@ -798,6 +791,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
