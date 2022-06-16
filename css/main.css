@@ -620,12 +620,12 @@ p {
   margin-left: 10px;
 }
 
-.is-hidden {
+.backdrop.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: opacity var(--transition-settings);
-  transition: opacity var(--transition-settings);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -636,14 +636,8 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  -webkit-transition: opacity var(--transition-settings);
-  transition: opacity var(--transition-settings);
-}
-
-.is-hidden .modal {
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%) scale(0.5);
-          transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -656,10 +650,19 @@ p {
   min-height: 581px;
   background-color: rgb(255, 255, 255);
   opacity: 1;
-  -webkit-transition: opacity var(--transition-settings), -webkit-transform var(--transition-settings);
-  transition: opacity var(--transition-settings), -webkit-transform var(--transition-settings);
-  transition: transform var(--transition-settings), opacity var(--transition-settings);
-  transition: transform var(--transition-settings), opacity var(--transition-settings), -webkit-transform var(--transition-settings);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden .modal {
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-close {
@@ -673,7 +676,7 @@ p {
   height: 30px;
   padding: 0;
   cursor: pointer;
-  background-color: var(--primary-bg-color);
+  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   -webkit-box-pack: center;
@@ -687,140 +690,11 @@ p {
 .btn-close__icon {
   display: block;
   margin: 0;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.btn-close:hover .btn-close__icon,
-.btn-close:focus .btn-close__icon {
+.btn-close:hover .btn-close__icon, .btn-close:focus .btn-close__icon {
   fill: #2196f3;
-  -webkit-transition: fill var(--transition-settings);
-  transition: fill var(--transition-settings);
-}
-
-/* -------Форма в модалке-------------- */
-.order-form {
-  width: inherit;
-  padding: 40px;
-}
-
-.order-form__head {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.form-field {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.form-field__input {
-  height: 40px;
-  padding: 11px 12px 11px 40px;
-  cursor: pointer;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-  -webkit-transition: border var(--transition-settings);
-  transition: border var(--transition-settings);
-}
-
-.form-field__textarea {
-  resize: none;
-  color: rgba(117, 117, 117, 0.5);
-  height: 120px;
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-  -webkit-transition: border var(--transition-settings);
-  transition: border var(--transition-settings);
-}
-
-.form-field__input:focus,
-.form-field__textarea:focus {
-  border: 1px solid #2196f3;
-}
-
-.form-field__label,
-.form-field__textarea[placeholder="Введите текст"] {
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: #757575;
-  -webkit-transition: border var(--transition-settings);
-  transition: border var(--transition-settings);
-}
-
-.form-field__label {
-  margin-bottom: 4px;
-}
-
-.form-field__icon {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: translateY(-68%);
-          transform: translateY(-68%);
-  margin-left: 12px;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  -webkit-transition: fill var(--transition-settings);
-  transition: fill var(--transition-settings);
-}
-
-.form-field__input:focus ~ .form-field__icon {
-  fill: var(--accent-color);
-}
-
-.checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
-  cursor: pointer;
-}
-
-.checkbox__icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-left: 12px;
-  margin-right: 7px;
-  border: 2px solid #212121;
-  border-radius: 2px;
-  -webkit-transition: background-color var(--transition-settings), border-color var(--transition-settings);
-  transition: background-color var(--transition-settings), border-color var(--transition-settings);
-}
-
-/* !!!! не получается чекнутая иконка---- */
-.checkbox:checked .checkbox__icon {
-  border-color: #2196f3;
-  background-color: #2196f3;
-  background-image: url(".../images/icon-check.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-origin: border-box;
 }
 
 .order-form {
@@ -912,7 +786,6 @@ p {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .form-field__input:focus ~ .form-field__icon {
   fill: #2196f3;
 }
@@ -944,11 +817,11 @@ p {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* !!!! не получается чекнутая иконка---- */
-.checkbox:checked .checkbox__icon {
+/* !!!!  */
+.checkbox__input:checked + .checkbox__icon {
   border-color: #2196f3;
   background-color: #2196f3;
-  background-image: url("./images/icon-check.svg");
+  background-image: url("../images/icon-check.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
